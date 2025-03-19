@@ -7,7 +7,7 @@ module.exports.sendMessage = (message) => {
       polling: false,
     }); // Set polling to true if you want to receive updates through polling.
 
-    const chatIds = ["1492039753", "-4735856200"];
+    const chatIds = ["-4735856200"];
 
     // Send the message to the specified chats.
     chatIds.forEach(async (chatId) => {
